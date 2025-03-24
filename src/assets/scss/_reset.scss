@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height;
+  color: $text-color;
+
+  background-color: $background-color-light;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color $transition-duration $transition-timing;
+
+  &:hover {
+    color: $primary-color-dark;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,118 @@
+@use 'sass:color';
+
+@import 'reset';
+@import 'forms';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $padding-md;
+}
+
+.page-title {
+  margin-bottom: $margin-lg;
+  font-size: 2rem;
+  font-weight: $font-weight-bold;
+  color: $text-color;
+}
+
+.page-subtitle {
+  margin-bottom: $margin-md;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: $text-color-light;
+}
+
+.mb-lg {
+  margin-bottom: $margin-lg;
+}
+
+.mb-md {
+  margin-bottom: $margin-md;
+}
+
+.mb-sm {
+  margin-bottom: $margin-sm;
+}
+
+.card {
+  margin-bottom: $margin-lg;
+  padding: $padding-lg;
+  border-radius: $border-radius;
+
+  background-color: $background-color;
+  box-shadow: $shadow-md;
+}
+
+.alert {
+  margin-bottom: $margin-md;
+  padding: $padding-md;
+  border-radius: $border-radius;
+
+  &-success {
+    border: 1px solid rgba($success-color, 0.25);
+    color: color.adjust($success-color, $lightness: 10%);
+    background-color: rgba($success-color, 0.1);
+  }
+
+  &-info {
+    border: 1px solid rgba($info-color, 0.25);
+    color: color.adjust($info-color, $lightness: 10%);
+    background-color: rgba($info-color, 0.1);
+  }
+}
+
+.nav {
+  margin-bottom: $margin-lg;
+  padding: $padding-md 0;
+
+  color: white;
+
+  background-color: $primary-color;
+  box-shadow: $shadow-sm;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: white;
+  }
+
+  &__menu {
+    display: flex;
+    gap: $margin-md;
+    list-style: none;
+
+    &-item {
+      a {
+        padding: $padding-sm $padding-md;
+        border-radius: $border-radius;
+
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+
+        transition: all $transition-duration $transition-timing;
+
+        :hover,
+        .active {
+          color: white;
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: $margin-lg;
+  padding: $padding-lg 0;
+
+  font-size: $font-size-sm;
+  color: $text-color-light;
+  text-align: center;
+}

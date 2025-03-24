@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "stylelint-config-recommended-vue",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-clean-order"
+  ],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/order": ["custom-properties", "declarations"],
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute"]
+      }
+    ],
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "selector-class-pattern": "^[a-zA-Z0-9\\-_]+(__[a-zA-Z0-9\\-_]+)?(--[a-zA-Z0-9\\-_]+)?$",
+    "selector-pseudo-element-no-unknown": [
+      true,
+      { "ignorePseudoElements": ["v-deep"] }
+    ],
+    "declaration-block-no-redundant-longhand-properties": null,
+    "declaration-property-value-no-unknown": null
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "customSyntax": "postcss-html"
+    }
+  ]
+}
